@@ -1,8 +1,10 @@
 name: Build ZFS Deb Packages
 
 on:
+  schedule:
+      - cron: '0 16 * * *'
   push:
-    branches: [ "master" ] # OpenZFS 主分支通常是 master
+    branches: [ "master" ]
     tags:
       - 'zfs-*'
       - 'v*'
@@ -28,6 +30,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
+          repository: openzfs/zfs
           ref: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.branch_to_build) || github.ref }}
           fetch-depth: 0
 
