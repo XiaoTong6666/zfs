@@ -1,0 +1,23 @@
+Architectures: amd64
+Codename: nightly
+Components: main
+Date: Thu, 11 Dec 2025 21:00:13 +0000
+Label: XiaoTong6666 ZFS Repo
+Origin: XiaoTong6666 ZFS
+Suite: nightly
+MD5Sum:
+ 80ad07bd1b08997117a8c40d9ddae886             8052 Packages
+ bbbc098496113eeb7ad655e53a604389             3031 Packages.gz
+ 23297540146e571edc5bcc954b375cf3              163 Release
+SHA1:
+ adb251547f9ce6f1ddbb0b28f34aa62e3d8930e0             8052 Packages
+ 8b51096a42f81a9583e7808b3d6a558e54a3092d             3031 Packages.gz
+ 3cd607c19d21bf3b7dc11c68dfe961e23562b9df              163 Release
+SHA256:
+ cb05ceb9a1c5b3114c3d833ba86b804dccc24acd33b7f01afae6dc7173cb4921             8052 Packages
+ d31379c3ad74eac3143385dacba32e2ecef5ac9471cd03392eea3f4f3481009f             3031 Packages.gz
+ b04d64f1bce5ed0f4ab93c79300c4d7a3540e87098824c5b39c40a34c5acd86d              163 Release
+SHA512:
+ 5ecd92b64e6f38d3db9dd1dd34635ea7e6ac2a81e85db15e776ca0e32612243991a7af49fa60e7033db62e59b4b0571433176bebc0da7e4626267e8dead641df             8052 Packages
+ 182c061c6d37bc2aaaf1ff89e8b276fcd3668e554523d69cc1e9402545c6df05e2414c2816c752fa8096fcf516d53c3eac324ab4500859d288f937a9b6cfedbd             3031 Packages.gz
+ 3668d3f5218f140332dee7e1bb920cf457998115f8186dfc9d947c925a808034d3a745f59ac08a36a03e10401df70f96be5d59caee94dede7821a4e57000b10f              163 Release
