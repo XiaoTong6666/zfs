@@ -148,12 +148,13 @@ jobs:
           echo "移动新的 .deb 包"
           find debs -type f -name "*.deb" -exec mv -f {} "$REPO_DIR/" \;
 
-          cd "gh-pages/dists/$DIST"
+          cd gh-pages
 
-          apt-ftparchive packages main/binary-amd64 > main/binary-amd64/Packages
-          gzip -k -f main/binary-amd64/Packages
-          rm -f Packages Packages.gz || true
+          apt-ftparchive packages "dists/$DIST/main/binary-amd64" \
+            > "dists/$DIST/main/binary-amd64/Packages"
+          gzip -k -f "dists/$DIST/main/binary-amd64/Packages"
 
+          cd "dists/$DIST"
           apt-ftparchive \
             -o APT::FTPArchive::Release::Origin="XiaoTong6666 ZFS" \
             -o APT::FTPArchive::Release::Label="XiaoTong6666 ZFS Repo" \
