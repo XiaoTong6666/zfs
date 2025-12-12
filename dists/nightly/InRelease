@@ -4,39 +4,39 @@ Hash: SHA512
 Architectures: amd64
 Codename: nightly
 Components: main
-Date: Thu, 11 Dec 2025 21:00:13 +0000
+Date: Fri, 12 Dec 2025 10:51:48 +0000
 Label: XiaoTong6666 ZFS Repo
 Origin: XiaoTong6666 ZFS
 Suite: nightly
 MD5Sum:
- 80ad07bd1b08997117a8c40d9ddae886             8052 Packages
- bbbc098496113eeb7ad655e53a604389             3031 Packages.gz
- 23297540146e571edc5bcc954b375cf3              163 Release
+ 9591e4e10ee26bc0271023a72baac42b            16104 Packages
+ 00bebf71cab04fcfeba12e7485199e2f             5154 Packages.gz
+ cd9173d0d94c15d15904dea0fab73aad              163 Release
 SHA1:
- adb251547f9ce6f1ddbb0b28f34aa62e3d8930e0             8052 Packages
- 8b51096a42f81a9583e7808b3d6a558e54a3092d             3031 Packages.gz
- 3cd607c19d21bf3b7dc11c68dfe961e23562b9df              163 Release
+ ce6f8e56ff60acd4e65f11297db6a759ee65e491            16104 Packages
+ ef068dc492e1a6bdfd4e65456c564cafca56adba             5154 Packages.gz
+ dd3a07e6018c5dc73ace836f4460cc76fd580c46              163 Release
 SHA256:
- cb05ceb9a1c5b3114c3d833ba86b804dccc24acd33b7f01afae6dc7173cb4921             8052 Packages
- d31379c3ad74eac3143385dacba32e2ecef5ac9471cd03392eea3f4f3481009f             3031 Packages.gz
- b04d64f1bce5ed0f4ab93c79300c4d7a3540e87098824c5b39c40a34c5acd86d              163 Release
+ 8a2ad09eed72dcd0734592df3440b27319c5d01896e0b820b9fc86133503c8b8            16104 Packages
+ b29f81e33c3aae1d5162f76e687500ade283095951c8903d38f574ae40fbfa02             5154 Packages.gz
+ 8650daa9a7ae9887bcc087c6376cd7fc3f6718f517c81d2ceaf303a07e584fa8              163 Release
 SHA512:
- 5ecd92b64e6f38d3db9dd1dd34635ea7e6ac2a81e85db15e776ca0e32612243991a7af49fa60e7033db62e59b4b0571433176bebc0da7e4626267e8dead641df             8052 Packages
- 182c061c6d37bc2aaaf1ff89e8b276fcd3668e554523d69cc1e9402545c6df05e2414c2816c752fa8096fcf516d53c3eac324ab4500859d288f937a9b6cfedbd             3031 Packages.gz
- 3668d3f5218f140332dee7e1bb920cf457998115f8186dfc9d947c925a808034d3a745f59ac08a36a03e10401df70f96be5d59caee94dede7821a4e57000b10f              163 Release
+ e21c473ce641313cbc7910c033d1e9911ffd7ea74057439cdc25dddee06c9f600cf84baf54010826fbb0a8fa43ff415baea7a44f6c8793df42abbcf20af9b5d4            16104 Packages
+ 8806b6225dd7d4f3ed4e08c29fce5bdd75aff430b5e4aa6f7752e7a3fb58aa23c543c90ec8d6f60adca78e043726232cad51790eadcbc675dc36218a01b74d71             5154 Packages.gz
+ 44d1c7bcd8b6cef8020e4777f2f5cfa747f0c402c129bf79ae9e2047981522432a53f4b3d75be116510a1cf6ccf63195b3e72184192a3e439b76b1df57ae9db0              163 Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEm5KHHZEKRbXFJfj12gnQrO9wTkcFAmk7MN0ACgkQ2gnQrO9w
-TkfB5w//V1OzgjcMybmrC/tBy2GsbV9nCYcvGjnPCdEoaKd2uXIx4nXgqsJ3itAq
-gZhI5KkbIQ0mEakboIHm4kCTikdGRpaLaJpT+ouUjWB8Ri2mdu3gRrSRlbx2zPu9
-p1riW3spD7LIHiYTMG6RWj2Xj61ZzenBR/3j/ipcsUYLgDgC6ozXSZ3xnh+Y8tqn
-X+8E2vCZb8LVXtD/B6wN8wexL5PPBsNF87MnKt32vOzcmvsz4LWINY5UORqPYB17
-v5rFHEJytHkTNd/V7e3IDPVJZnu2E01/I3gqZlFdCXVS+eqOvSXiufr0n0tuuFsF
-1v5hOA1mXyHA/fvHQIyWHQhbaIP70xJh8OKP2Bv+FVXRr9rAQZefo8wm0RhNm15K
-KM+GcvWfMcVgY+D4KtK4morR+B8EcQgVrioyNTt/4Ekzef02tGQk+ga3P5lmP5UZ
-DYGPeG91FLP7r6drc/mm2YYamZp8vC8FzYud04fXBJSQp+A6UNSpH/smjHokgFeK
-VQERCmWdP5yhFttmNBwc2Vxw2ETdl9lJ9PaLxqpf8GYLjB9vyReggDcIMNfLixC7
-bNSIiV2CB3RWk0THEjehL889cgsQclHV8zSNjeE393lowzLM90QZV1jK/xZT4u3m
-Rxaxhwo6DF4zNDQ8V1El830XDgyLrDAnHt5VrvQKy7MNsn6gJ4E=
-=Ytux
+iQIzBAEBCgAdFiEEm5KHHZEKRbXFJfj12gnQrO9wTkcFAmk788QACgkQ2gnQrO9w
+TkerTBAAh5VX8ezkU4fyoN60h0TiNt6h7yBusMbekOjP5v8pufQqfzFG0+uMK6J6
+xgRGo/6iXhxbsyoQyOzwSaKY1bXCER7yxKBiVrdWyB3oKaVmd7sg3StQq9I56hFk
+eS/B41ImWIYVZaoPmL4orsaWIe9FRPtesK1Hy6pCrfsCdkE+BICtvgR2P1E+7ctn
+daDfl2cApymSZaXWjT/P+IQbEFP5fycLisQtyFB8o+p1zvKLU6lUbP8NCpu6FIOU
+qXeFXr0B8M5lGf0VnciuaxpjM4oHU/F9O/0UlVGZs5pHbX08jWnG6CcVAnUKAcDW
+sTbvTzatGFYbSlm5jHB91f4oEO5T4VYM91+ecr50qwAawDUo1Z6j8vdhldyU48US
+xxk/6Qhav/+imbQfUmspADISsLObqXMdaZq/siHcP4AA8W4sN/U4GumxScUsRAjl
+IaaqB3e2lUoebO+vdIFOQrbIkTT+4/DTTrvMVktmz/XQcIAqXoLO54+mmKt+CFMf
+v6meYg8Zjueep0IVsms6SrHlP9NK+UNQzn9zbmMQ66CAff4qOTnRVHZS4H9PcxUG
+6l3JGh3excIGon+lQjcPXJewPZS5gJLGNffj1xREdiCY5L42xnxUJusi7Oamdsv4
+JFKQE4lryEdDIKcPQ41pt0fjdxG10NlJI1KXCCl72SIvRuDKmog=
+=rgyd
 -----END PGP SIGNATURE-----
