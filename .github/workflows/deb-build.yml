@@ -1,9 +1,6 @@
-# 文件名: .github/workflows/deb-build.yml
-
 name: Build and Publish ZFS Debs
 
 on:
-  # 每日定时构建 (东8区 0点), 目标是上游的 master 分支
   schedule:
     - cron: '0 16 * * *'
   workflow_dispatch:
@@ -20,22 +17,18 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # 定义输出，用于将计算好的变量传递给下一个任务
     outputs:
       dist_name: ${{ steps.set_vars.outputs.dist_name }}
       should_publish: ${{ steps.set_vars.outputs.should_publish }}
 
     steps:
-      # 步骤1: 根据触发方式，设置好所有需要的变量
       - name: Set reusable variables
         id: set_vars
         run: |
           REF_TO_BUILD=""
           DIST_NAME=""
-          # 默认总是需要发布
           SHOULD_PUBLISH="true"
 
-          # 判断是定时触发还是手动触发
           if [[ "${{ github.event_name }}" == "schedule" ]]; then
             echo "定时任务触发，构建 master 分支..."
             REF_TO_BUILD="master"
@@ -43,35 +36,29 @@ jobs:
           elif [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
             echo "手动触发，构建用户输入的分支/标签..."
             REF_TO_BUILD="${{ github.event.inputs.ref_to_build }}"
-            # 如果手动输入的是 master，发行版也叫 nightly
             if [[ "${{ github.event.inputs.ref_to_build }}" == "master" ]]; then
               DIST_NAME="nightly"
             else
               DIST_NAME="${{ github.event.inputs.ref_to_build }}"
             fi
           else
-            # 其他未知触发方式，则标记为不发布
             SHOULD_PUBLISH="false"
           fi
 
           echo "将要构建的 Ref: $REF_TO_BUILD"
           echo "APT 发行版名称: $DIST_NAME"
           
-          # 使用 GITHUB_OUTPUT 将变量传递出去
           echo "ref_to_build=$REF_TO_BUILD" >> $GITHUB_OUTPUT
           echo "dist_name=$DIST_NAME" >> $GITHUB_OUTPUT
           echo "should_publish=$SHOULD_PUBLISH" >> $GITHUB_OUTPUT
 
-      # 步骤2: 从 OpenZFS 官方仓库拉取源代码
       - name: Checkout OpenZFS source code
         uses: actions/checkout@v4
         with:
           repository: openzfs/zfs
-          # 使用上一步计算出的 ref
           ref: ${{ steps.set_vars.outputs.ref_to_build }}
           fetch-depth: 0
 
-      # 步骤3: 安装编译所需的所有依赖
       - name: Install Dependencies
         run: |
           sudo apt-get update
@@ -81,7 +68,6 @@ jobs:
             libcurl4-openssl-dev libelf-dev libffi-dev libpam0g-dev libssl-dev libtirpc-dev libtool libudev-dev linux-headers-generic po-debconf \
             python3 python3-all-dev python3-cffi python3-dev python3-packaging python3-setuptools python3-sphinx uuid-dev zlib1g-dev
 
-      # 步骤4: 编译 ZFS，生成 .deb 安装包
       - name: Build ZFS Debs
         run: |
           sh autogen.sh
@@ -92,69 +78,60 @@ jobs:
           echo "编译完成的 .deb 包:"
           ls -l out/
 
-      # 步骤5: 将编译好的 .deb 包作为产物上传，供下一个任务下载
       - name: Upload Deb Artifacts for publishing job
         uses: actions/upload-artifact@v4
         with:
           name: zfs-deb-packages
           path: out/*.deb
 
-  # 第二个任务: 发布到 APT 仓库
   publish-apt-repo:
-    # 依赖 build 任务，必须在 build 成功后运行
     needs: build
     runs-on: ubuntu-latest
-    # 关键判断: 只有当 build 任务标记 should_publish 为 true 时才运行
     if: needs.build.outputs.should_publish == 'true'
 
     steps:
-      # 步骤1: 安装发布工具
       - name: Install APT tools and GPG
         run: |
           sudo apt-get update
           sudo apt-get install -y apt-utils gnupg
 
-      # 步骤2: 下载 build 任务上传的 .deb 包产物
       - name: Download deb packages
         uses: actions/download-artifact@v4
         with:
           name: zfs-deb-packages
           path: debs
 
-      # 步骤3: 导入用于签名的 GPG 私钥
+      - name: Debug GPG Key Secret
+        run: |
+          echo "GPG_PRIVATE_KEY length: ${{ length(secrets.GPG_PRIVATE_KEY) }}"
+
       - name: Import GPG Key
         uses: crazy-max/ghaction-import-gpg@v6
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
-      # 步骤4: 检出你自己的 gh-pages 分支，这是 APT 仓库的存放地
       - name: Checkout gh-pages branch from your repo
         uses: actions/checkout@v4
         with:
           ref: gh-pages
           path: gh-pages
 
-      # 步骤5: 生成 APT 仓库的元数据并签名
       - name: Build APT Repository
         run: |
-          # 直接使用从 build 任务传递过来的发行版名称
           DIST="${{ needs.build.outputs.dist_name }}"
           echo "正在发布到 APT 发行版: $DIST"
           
           REPO_DIR="gh-pages/dists/$DIST/main/binary-amd64"
           mkdir -p "$REPO_DIR"
           
-          # 将所有下载的 .deb 文件移动到目标目录
           find debs -type f -name "*.deb" -exec mv -f {} "$REPO_DIR/" \;
           
           cd "gh-pages/dists/$DIST"
           
-          # 生成 Packages 和 Packages.gz 文件
           apt-ftparchive packages . > Packages
           gzip -k -f Packages
           
-          # 生成 Release 文件
           apt-ftparchive \
             -o APT::FTPArchive::Release::Origin="XiaoTong6666 ZFS" \
             -o APT::FTPArchive::Release::Label="XiaoTong6666 ZFS Repo" \
@@ -164,11 +141,9 @@ jobs:
             -o APT::FTPArchive::Release::Components="main" \
             release . > Release
             
-          # 签名 Release 文件，生成 InRelease 和 Release.gpg
           gpg --clearsign --yes -u "${{ steps.import_gpg.outputs.fingerprint }}" -o InRelease Release
           gpg -abs --yes -u "${{ steps.import_gpg.outputs.fingerprint }}" -o Release.gpg Release
 
-      # 步骤6: 将更新后的 APT 仓库推送到 gh-pages 分支
       - name: Commit and Push to gh-pages
         run: |
           cd gh-pages
