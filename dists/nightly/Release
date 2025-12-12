@@ -1,23 +1,23 @@
 Architectures: amd64
 Codename: nightly
 Components: main
-Date: Fri, 12 Dec 2025 11:24:36 +0000
+Date: Fri, 12 Dec 2025 11:33:21 +0000
 Label: XiaoTong6666 ZFS Repo
 Origin: XiaoTong6666 ZFS
 Suite: nightly
 MD5Sum:
- c9888e038c01f5301113aecd4ad62bcb            16104 Packages
- f805b3c73c0385e434096bea7b8f221e             5153 Packages.gz
- a3828b4fcdf8461c6d47c374780d40dd              163 Release
+ dcb304fe36c6a7b02809d1fcf77c1fb5            16104 Packages
+ 70a82f5b2435e0014d98dbeae7ca1b64             5145 Packages.gz
+ 7b734f94fd539759b3d68cbf795dae72              163 Release
 SHA1:
- cf385604fe0c20c9dd4bcadaa53288dea6ed2f10            16104 Packages
- 83af56df1c03350c724bf73b15934ce040644edd             5153 Packages.gz
- 44454ee6cd461b19247332da8eef9c295560b945              163 Release
+ abaa38ce41d31e813dfb1ad647f85ff5aee1f48d            16104 Packages
+ 456f8b282f512beba4112194c0e82a06e2d13f26             5145 Packages.gz
+ abfe609f4df6d4a83401777c7c130597854ecced              163 Release
 SHA256:
- df298fafbf4938c17c9429d1305c1bd79b3ade75bb74098249d3fb4a5a50ef6d            16104 Packages
- c7e1c14543793fc23bc745b0d0e596cbf5f3692e4d1d26adaf6aeb206d3cce32             5153 Packages.gz
- 2ec34939243c2c858592050235968cf1b3703b40a8cc8d34c4df57967526330b              163 Release
+ 83d6ad6649fa250f136edd9dfab76bf268b0c639858655b3473a84505347bd0a            16104 Packages
+ 67a528370020d275b8cdacd66829580f48b6315313a5384e3f89e708b34e9fd7             5145 Packages.gz
+ 5eabdd0044a43b26c5c107c1dc7f0401cbe6194ee73ebe98c241f4df3201b13a              163 Release
 SHA512:
- 462a638be7a4cb5f2f9448eb9e4f9d33a19997d7c945b6b86e7ee65c8261f2ab74c2ccc486c7c2a8912b4098285e77649134564a7ff3425c8a24f151c5fb435b            16104 Packages
- dcabf698ec7dd69d0968a07eeaee2bcb5cc7ac4383e48cad460186b91af1cdfae3346ead1e00c7ffdff5132298bd902125ae0751e66e46361e6984b482ed6bb6             5153 Packages.gz
- 735d3f4bedf40a8c29ef975dfaaa64dece7496885c7e33f983a29c5733af46929a41c5328bc0d25d22e1931e128a4fd59f0fab92b827792fbdff6742427a0a2b              163 Release
+ 1945095f596de6be935d78a4e5e12eb6340e3a92a89c1ee2f717d92b0fbdada88d753f07c6b30892edc71997417325987ecd02cfa644af3f03fac480b2acff85            16104 Packages
+ 44e90d085fb55f07a9a8f0c235d3aac8d138220ef8de373396e8857466146fe8c32b91fe2d8d6e19d4c18e230ee1885b8b3a6bde9161fd2572facdcc9c441f47             5145 Packages.gz
+ 2ec0a2dc07a7f78f1966cf87871eb35c34dec97192c0cb36e1de19550f42afbffb08d797fc07858b48d9e3859784573722d573827ed420dc1099a184a58a8a93              163 Release
