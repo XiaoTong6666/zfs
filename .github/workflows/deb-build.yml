@@ -109,7 +109,7 @@ jobs:
           tag_name: nightly
           name: Nightly Build
           body: "自动构建的最新 ZFS 开发版 .deb 包。仅供测试使用。"
-          prerelease: true
+          prerelease: false
           files: debs/*.deb
 
       - name: Create Official GitHub Release
