@@ -1,23 +1,23 @@
 Architectures: amd64
 Codename: nightly
 Components: main
-Date: Fri, 12 Dec 2025 10:51:48 +0000
+Date: Fri, 12 Dec 2025 11:14:46 +0000
 Label: XiaoTong6666 ZFS Repo
 Origin: XiaoTong6666 ZFS
 Suite: nightly
 MD5Sum:
- 9591e4e10ee26bc0271023a72baac42b            16104 Packages
- 00bebf71cab04fcfeba12e7485199e2f             5154 Packages.gz
- cd9173d0d94c15d15904dea0fab73aad              163 Release
+ 3b057097fdc1e86038947159b57dc25c            16104 Packages
+ 343dfb6266cf833a571b122c6130e998             5149 Packages.gz
+ e84c3a19491dc044040eba853e6be46f              163 Release
 SHA1:
- ce6f8e56ff60acd4e65f11297db6a759ee65e491            16104 Packages
- ef068dc492e1a6bdfd4e65456c564cafca56adba             5154 Packages.gz
- dd3a07e6018c5dc73ace836f4460cc76fd580c46              163 Release
+ 897004d7b4b1bb318cbb3056ab79d248e258509b            16104 Packages
+ 3c639b6ff740c34ec2d5ba091aec902b2aadac94             5149 Packages.gz
+ 9e73a0cad15d8f2f6ba19ef44d465e7ea1b6c01a              163 Release
 SHA256:
- 8a2ad09eed72dcd0734592df3440b27319c5d01896e0b820b9fc86133503c8b8            16104 Packages
- b29f81e33c3aae1d5162f76e687500ade283095951c8903d38f574ae40fbfa02             5154 Packages.gz
- 8650daa9a7ae9887bcc087c6376cd7fc3f6718f517c81d2ceaf303a07e584fa8              163 Release
+ 2a01853e6336cac39c04ade39759f1c38f55b86fb76aceffc6566f193954425e            16104 Packages
+ e7f92a2be0b92674776c7d91eaac7082a867456311d617866703affdfa1f6ab1             5149 Packages.gz
+ 40d0b16b4731afffb18f87655bf39f24633f6f2ad1947d6726c7dd19360e33b1              163 Release
 SHA512:
- e21c473ce641313cbc7910c033d1e9911ffd7ea74057439cdc25dddee06c9f600cf84baf54010826fbb0a8fa43ff415baea7a44f6c8793df42abbcf20af9b5d4            16104 Packages
- 8806b6225dd7d4f3ed4e08c29fce5bdd75aff430b5e4aa6f7752e7a3fb58aa23c543c90ec8d6f60adca78e043726232cad51790eadcbc675dc36218a01b74d71             5154 Packages.gz
- 44d1c7bcd8b6cef8020e4777f2f5cfa747f0c402c129bf79ae9e2047981522432a53f4b3d75be116510a1cf6ccf63195b3e72184192a3e439b76b1df57ae9db0              163 Release
+ 698d223a12e62eece11d302e6fc9c8140b0748e2900ee806b88336a0e2f47ed752e6696e8d74354ce10b1e2ccb13505862bfec6af3837307d8f778c09b4ef1ee            16104 Packages
+ e51a433faa78c9748fdecc64272680a53550becd170da8cc05e617c77cd37ca814d2e7786ac471e75c40009b3491bea2c2918a2d7efb159c09ea6500a8f826bc             5149 Packages.gz
+ 86cbccfec7392deaaa1738de639bc80612886dc0d627707d6deaef7cd3e9b7060ef9026e912f70084a46831cb070710b6f4d60612dbe48c3731d072df3f0e5a7              163 Release
