@@ -150,8 +150,9 @@ jobs:
 
           cd "gh-pages/dists/$DIST"
 
-          apt-ftparchive packages . > Packages
-          gzip -k -f Packages
+          apt-ftparchive packages main/binary-amd64 > main/binary-amd64/Packages
+          gzip -k -f main/binary-amd64/Packages
+          rm -f Packages Packages.gz || true
 
           apt-ftparchive \
             -o APT::FTPArchive::Release::Origin="XiaoTong6666 ZFS" \
